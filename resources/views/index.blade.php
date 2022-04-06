@@ -1,21 +1,50 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="background-image grid grid-cols-1 m-auto">
-        <div class="flex text-gray-100 pt-10">
-            <div class="m-auto pt-4 pb-16 sm:m-auto w-4/5 block text-center">
-                <h1 class="sm:text-white text-5xl uppercase font-bold text-shadow-md pb-14">
-                    Do you want to become a developer?
-                </h1>
-                <a 
-                    href="/blog"
-                    class="text-center bg-gray-50 text-gray-700 py-2 px-4 font-bold text-xl uppercase">
-                    Read More
-                </a>
-            </div>
-        </div>
+<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
-
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="10000">
+        <a href="https://kotaku.com/rplace-reddit-april-fools-elden-ring-hollow-knight-word-1848747948">
+        <img src="https://i.kinja-img.com/gawker-media/image/upload/c_fit,f_auto,g_center,pg_1,q_60,w_965/ca51e06c966a0fc2865026659b865b82.jpg"  class="d-block w-70 h-90 p-2 mx-auto" alt="...">
+    </a>
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Reddit Is Hosting What May Be The Internet's Most Wholesome Fan War</h5>
+          <p>Gaming fandoms band together to protect their pixel art in r/place</p>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <a href ="https://kotaku.com/lego-star-wars-skywalker-saga-review-kotaku-ps5-xbox-tt-1848746867">
+        <img src="https://i.kinja-img.com/gawker-media/image/upload/c_fit,f_auto,g_center,pg_1,q_60,w_965/b630506cf871c5859909299c47e1a388.jpg" class="d-block w-70 h-90 p-2 mx-auto" alt="...">
+      </a>
+            <div class="carousel-caption d-none d-md-block">
+          <h5 class="slideshow_text">Lego Star Wars: The Skywalker Saga: The Kotaku Review</h5>
+          <p class="slideshow_text">This isn’t the first time Lego and Star Wars have been digitally combined, but it’s easily the best</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <a href="https://i.kinja-img.com/gawker-media/image/upload/c_fit,f_auto,g_center,pg_1,q_60,w_965/adc5333205f95785c9ecf1192ae30dee.jpg">
+        <img src="https://i.kinja-img.com/gawker-media/image/upload/c_fit,f_auto,g_center,pg_1,q_60,w_965/adc5333205f95785c9ecf1192ae30dee.jpg" class="d-block w-70 h-90 p-2 mx-auto" alt="...">
+        </a>
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Monkey Island Returns With A New Game From Original Creators Later This Year</h5>
+          <p>Ron Gilbert, David Grossman are back after more than 30 years away from the classic Lucasfilm adventure franchise</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
     <div class="sm:grid grid-cols-2 gap-20 w-4/5 mx-auto py-15 border-b border-gray-200">
         <div>
             <img src="https://cdn.pixabay.com/photo/2014/05/03/01/03/laptop-336704_960_720.jpg" width="700" alt="">
