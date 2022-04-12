@@ -13,7 +13,7 @@
         <img src="https://i.kinja-img.com/gawker-media/image/upload/c_fit,f_auto,g_center,pg_1,q_60,w_965/ca51e06c966a0fc2865026659b865b82.jpg"  class="d-block w-70 h-90 p-2 mx-auto" alt="...">
     </a>
         <div class="carousel-caption d-none d-md-block">
-          <h5>Reddit Is Hosting What May Be The Internet's Most Wholesome Fan War</h5>
+          <h5 class="slideshow">Reddit Is Hosting What May Be The Internet's Most Wholesome Fan War</h5>
           <p>Gaming fandoms band together to protect their pixel art in r/place</p>
         </div>
       </div>

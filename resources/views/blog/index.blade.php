@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
 <div class="w-4/5 m-auto text-center">
     <div class="py-15 border-b border-gray-200">
         <h1 class="text-6xl">
@@ -8,6 +9,19 @@
         </h1>
     </div>
 </div>
+
+{{-- search bar --}}
+<form action="/search" method="POST" role="search">
+    {{ csrf_field() }}
+    <div class="input-group">
+        <input type="text" class="form-control" name="q"
+            placeholder="Search Post"> <span class="input-group-btn">
+            <button type="submit" class="btn btn-default">
+                <span class="glyphicon glyphicon-search"></span>
+            </button>
+        </span>
+    </div>
+</form>
 
 @if (session()->has('message'))
     <div class="w-4/5 m-auto mt-10 pl-2">
