@@ -16,11 +16,11 @@ use App\Http\Controllers\PostsController;
 */
 
 Route::get('/', [PagesController::class, 'index']);
-
+Route::post('/search_post',[PostsController::class,'search']);
 Route::resource('/blog', PostsController::class);
 
 Auth::routes();
 
 Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::post('/search_post',[PostsController::class,'search']);
+
 

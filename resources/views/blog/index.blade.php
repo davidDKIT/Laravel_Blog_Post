@@ -11,6 +11,7 @@
 </div>
 
 <form class="d-flex" method="post" action="{{ url('/search_post') }}">
+    @csrf
     <input class="form-control me-2" type="search" placeholder="Search" name="search" aria-label="Search">
     <button class="btn btn-dark"type="submit" name="submit">Search</button>
 </form>

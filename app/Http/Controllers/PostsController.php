@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Post;
 use Cviebrock\EloquentSluggable\Services\SlugService;
+use DB;
 
 class PostsController extends Controller
 {
@@ -129,8 +130,7 @@ class PostsController extends Controller
             ->with('message', 'Your post has been deleted!');
     }
     public function search(Request $request){
-        $posts = DB::table('posts')
-    ->where('title', 'like', '%' .$request->search . '%')->get();
+        $posts = Post::where('title', 'like', '%' .$request->search . '%')->get();
     return view('blog.search_post',compact('posts'));
     }
 }
