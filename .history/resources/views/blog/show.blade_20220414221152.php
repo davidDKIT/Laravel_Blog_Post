@@ -5,6 +5,9 @@
     <input class="form-control me-2" type="search" placeholder="Search" name="search" aria-label="Search">
     <button class="btn btn-dark" type="submit" name="submit">Search</button>
 </form>
+<div>
+    <img src="{{ asset('images/' . $post->image_path) }}" alt="">
+</div>
 <div class="w-4/5 m-auto text-left">
     <div class="py-15">
         <h1 class="text-6xl">

@@ -12,7 +12,7 @@
         </h1>
     </div>
 </div>
-    <div>
+<div>
     <img class="m-auto h-80" src="{{ asset('images/' . $post->image_path) }}" alt="">
     </div>
 <div class="w-4/5 m-auto pt-20">
