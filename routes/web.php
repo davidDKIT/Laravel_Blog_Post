@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\PostsController;
-
+use App\Http\Controllers\CommentsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,7 +17,9 @@ use App\Http\Controllers\PostsController;
 
 Route::get('/', [PagesController::class, 'index']);
 Route::post('/search_post',[PostsController::class,'search']);
-Route::resource('/blog', PostsController::class);
+Route::resource('/blog', PostsController::class); 
+Route::post('/blog/{post}/comments', [CommentsController::class, 'storeComment']);
+Route::delete('/comments/{comment}', [CommentsController::class, 'destroy']); 
 
 Auth::routes();
 

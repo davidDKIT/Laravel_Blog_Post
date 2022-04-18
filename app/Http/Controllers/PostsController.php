@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Post;
+use App\Models\Comment;
 use Cviebrock\EloquentSluggable\Services\SlugService;
 use DB;
 
@@ -76,6 +77,13 @@ class PostsController extends Controller
         return view('blog.show')
             ->with('post', Post::where('slug', $slug)->first());
     }
+    public function showComment($slug)
+    {
+        return view('posts.show', [
+            'post'     => $post,
+            'comments' => $post->comments()->paginate(5)
+        ]);
+    }
 
     /**
      * Show the form for editing the specified resource.
@@ -133,5 +141,17 @@ class PostsController extends Controller
         $posts = Post::where('title', 'like', '%' .$request->search . '%')->get();
     return view('blog.search_post',compact('posts'));
     }
+    public function storeComment(PostsRequest $request)
+    {
+        $data = $request->validated();
+
+        $post = new Post();
+        $post->title = $data['title'];
+        $post->text  = $data['text'];
+        $post->save();
+
+        return redirect('/blog/'.$post->id);
+    }
+    
 }
 
