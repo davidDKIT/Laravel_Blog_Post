@@ -70,10 +70,6 @@
                             name="password_confirmation" required autocomplete="new-password">
                     </div>
                     <hr>
-                    <div class="form-group row mb-0">
-                        <a href="{{ route('login.github') }}" class="block w-full bg-zinc-900 text-white text-center rounded-lg p-3 my-2 font-bold"><i class="bi bi-github mr-3"></i>Login with GitHub</a>
-                    </div>
-
                     <div class="flex flex-wrap">
                         <button type="submit"
                             class="w-full select-none font-bold whitespace-no-wrap p-3 rounded-lg text-base leading-normal no-underline text-gray-100 bg-blue-500 hover:bg-blue-700 sm:py-4">
