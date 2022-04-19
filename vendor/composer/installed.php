@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'ea2da923730a0342a78d0bd70b180cc3e39aa9c6',
+        'reference' => '30ca40247e55202a55ce794ad0ffa50703e2209e',
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
@@ -436,7 +436,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'ea2da923730a0342a78d0bd70b180cc3e39aa9c6',
+            'reference' => '30ca40247e55202a55ce794ad0ffa50703e2209e',
             'dev_requirement' => false,
         ),
         'laravel/sail' => array(
@@ -482,7 +482,7 @@
             'install_path' => __DIR__ . '/../laravel/ui',
             'aliases' => array(),
             'reference' => 'f11d295de1508c5bb56206a620b00b6616de414c',
-            'dev_requirement' => true,
+            'dev_requirement' => false,
         ),
         'league/commonmark' => array(
             'pretty_version' => '2.2.3',
@@ -820,8 +820,8 @@
         'psr/log-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '1.0|2.0',
-                1 => '1.0.0 || 2.0.0 || 3.0.0',
+                0 => '1.0.0 || 2.0.0 || 3.0.0',
+                1 => '1.0|2.0',
             ),
         ),
         'psr/simple-cache' => array(

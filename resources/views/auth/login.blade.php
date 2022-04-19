@@ -45,10 +45,11 @@
                         @enderror
                     </div>
 
+
                     <div class="flex items-center">
                         <label class="inline-flex items-center text-sm text-gray-700" for="remember">
-                            <input type="checkbox" name="remember" id="remember" class="form-checkbox"
-                                {{ old('remember') ? 'checked' : '' }}>
+                            <input type="checkbox" name="remember" id="remember" class="form-checkbox" {{
+                                old('remember') ? 'checked' : '' }}>
                             <span class="ml-2">{{ __('Remember Me') }}</span>
                         </label>
 
@@ -59,17 +60,28 @@
                         </a>
                         @endif
                     </div>
-                    
+                    <hr>
+                    <div class="form-group row mb-0">
+                         <div class="form-group row">
+                                <div class="col-md-6 offset-md-3">
+                                    <a href="{{ route('login.google') }}" class="btn btn-danger btn-block">Login with Google</a>
+                                    <a href="{{ route('login.facebook') }}" class="btn btn-primary btn-block">Login with Facebook</a>
+                                    <a href="{{ route('login.github') }}" class="btn btn-dark btn-block">Login with Github</a>
+                                </div>
+                            </div>
+                    </div>
+
                     <div class="flex flex-wrap">
                         <button type="submit"
-                        class="w-full select-none font-bold whitespace-no-wrap p-3 rounded-lg text-base leading-normal no-underline text-gray-100 bg-blue-500 hover:bg-blue-700 sm:py-4">
+                            class="w-full select-none font-bold whitespace-no-wrap p-3 rounded-lg text-base leading-normal no-underline text-gray-100 bg-blue-500 hover:bg-blue-700 sm:py-4">
                             {{ __('Login') }}
                         </button>
 
                         @if (Route::has('register'))
                         <p class="w-full text-xs text-center text-gray-700 my-6 sm:text-sm sm:my-8">
                             {{ __("Don't have an account?") }}
-                            <a class="text-blue-500 hover:text-blue-700 no-underline hover:underline" href="{{ route('register') }}">
+                            <a class="text-blue-500 hover:text-blue-700 no-underline hover:underline"
+                                href="{{ route('register') }}">
                                 {{ __('Register') }}
                             </a>
                         </p>
