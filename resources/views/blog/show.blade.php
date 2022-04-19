@@ -43,6 +43,44 @@
 
             <button type="submit" class="mt-6 py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none">Post</button>
         </form>
+
+        <div class="mt-6">
+            @foreach ($comments as $comment)
+                <div class="mb-5 bg-white px-4 py-6 rounded-sm shadow-md">
+                    <div class="flex">
+                        {{-- Avatar --}}
+                        <div class="mr-3 flex flex-col justify-center">
+                            <div>
+                                <?php
+                                    $parts    = explode(' ', $comment->author);
+                                    $initials = strtoupper($parts[0][0] . $parts[count($parts) - 1][0]);
+                                ?>
+
+                                <span class="bg-gray-300 p-3 rounded-full">{{ $initials }}</span>
+                            </div>
+                        </div>
+                        {{-- Avatar --}}
+
+                        <div class="flex flex-col justify-center">
+                            <p class="mr-2 font-bold">{{ $comment->author }}</p>
+                            <p class="text-gray-600">{{ $comment->created_at->diffForHumans() }}</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-3">
+                        <p>{{ $comment->text }}</p>
+                    </div>
+
+                    <form action="/comments/{{ $comment->id }}" method="POST" class="mb-0 mt-3">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="text-sm py-1 px-2 border border-gray-400 shadow-sm rounded-md hover:shadow-md">Delete</button>
+                    </form>
+                </div>
+            @endforeach
+
+            {{ $comments->links() }}
+        </div>
     </div>
 </div>
 
