@@ -43,9 +43,6 @@
         <h2 class="text-gray-700 font-bold text-5xl pb-4">
             {{ $post->title }}
         </h2>
-        <div>
-            <img class="m-auto h-80" src="{{ asset('images/' . $post->image_path) }}" alt="">
-        </div>
         <span class="text-gray-500">
             By <span class="font-bold italic text-gray-800">{{ $post->user->name }}</span>, Created on {{ date('jS M Y',
             strtotime($post->updated_at)) }}
@@ -59,25 +56,6 @@
             class="uppercase bg-blue-500 text-gray-100 text-lg font-extrabold py-4 px-8 rounded-3xl">
             Keep Reading
         </a>
-        <div>
-            @if (Auth::check())
-            @if(Auth::user()->hasLike($post))
-            <form class="inline-block" method="post"
-                action="{{ url('blog/liked', ['slug' => $post->slug, 'user_id'=>Auth::user()->id] ) }}"
-                enctype="multipart/form-data">
-                @csrf
-                <button type="submit"><i class="bi bi-balloon-heart-fil text-2xl ml-4"></i></button>
-            </form>
-            @else
-            <form class="inline-block" method="post"
-                action="{{ url('blog/bookmark', ['slug' => $post->slug, 'user_id'=>Auth::user()->id]) }}"
-                enctype="multipart/form-data">
-                @csrf
-                <button type="submit"><i class="bi bi-balloon-heart text-2xl ml-4"></i></button>
-            </form>
-            @endif
-            @endif
-        </div>
         @if (isset(Auth::user()->id) && Auth::user()->id == $post->user_id)
         <span class="float-right">
             <a href="/blog/{{ $post->slug }}/edit" class="text-gray-700 italic hover:text-gray-900 pb-1 border-b-2">

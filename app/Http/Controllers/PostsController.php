@@ -91,33 +91,7 @@ class PostsController extends Controller
             'comments' => $post->comments()->paginate(5)
         ]);
     }
-    public function likes()
-    {
-        return view('likes')
-            ->with('posts', Post::orderBy('updated_at', 'DESC')->get());
-    }
-    public function like($slug, $user_id)
-    {
-        $object = Post::where('slug', $slug)->first();
-
-        $user = User::where('id', $user_id)->first();
-
-        $user->bookmark($object);
-
-        return redirect('/blog');
-    }
-
-    public function unlike($slug, $user_id)
-    {
-        $object = Post::where('slug', $slug)->first();
-
-        $user = User::where('id', $user_id)->first();
-
-        $user->bookmark($object);
-
-        return redirect('/likes');
-    }
-
+    
     /**
      * Show the form for editing the specified resource.
      *

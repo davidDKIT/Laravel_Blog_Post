@@ -45,21 +45,4 @@ class User extends Authenticatable
     {
         return $this->hasMany(Post::class);
     }
-    public function like($post)
-    {
-        if($this->hasLike($post)) {
-            return $this->bookmarks()->where([
-                ['likes.post_id', $post->id]
-            ])->delete();
-        }
-    
-        return $this->likes()->create(['post_id' => $post->id, 'user_id'=> $this->id]);
-    }
-
-    public function hasLike($object)
-    {
-        return $this->likes()->where([
-            ['likes.post_id', $object->id]
-        ])->exists();
-    }
 }
