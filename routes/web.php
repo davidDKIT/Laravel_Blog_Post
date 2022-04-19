@@ -18,8 +18,12 @@ use App\Http\Controllers\CommentsController;
 Route::get('/', [PagesController::class, 'index']);
 Route::post('/search_post',[PostsController::class,'search']);
 Route::resource('/blog', PostsController::class); 
+Route::get('/blog/{post}', [PostsController::class, 'showComment']);
+Route::get('/blog/{post}', [PostsController::class, 'show']);
+Route::post('/blog/{post}', [PostsController::class, 'show']);
+Route::get('/blog/{post}/comments', [CommentsController::class, 'storeComment']);
 Route::post('/blog/{post}/comments', [CommentsController::class, 'storeComment']);
-Route::delete('/comments/{comment}', [CommentsController::class, 'destroy']); 
+Route::delete('/comments/{comment}', [CommentsController::class, 'destroy']);
 
 Auth::routes();
 

@@ -22,27 +22,30 @@
 
     {{-- comment section --}}
     <h2 class="mt-6 text-4xl leading-10 tracking-tight font-bold text-gray-900 text-center">Comments</h2>
-    <div>
-        <form action="/blog/{{ $post->id }}/comments" method="POST" class="mb-0">
-            @csrf
-            <label for="author" class="text-sm font-medium text-gray-700">Author</label>
-            <input type="text" name="author" class="mt-1 py-2 px-3 block w-full borded border-gray-400 rounded-md shadow-sm" value="{{ old('author')}}" required>
 
-            <label for="author" class="mt-6 block text-sm font-medium text-gray-700">Text</label>
-            <textarea name="text" class="mt-1 py-2 px-3 block w-full borded border-gray-400 rounded-md shadow-sm" required>{{ old('text') }}</textarea>
+        <div>
+            <form action="/blog/{{ $post->id }}/comments" method="POST" class="mb-0">
+                @csrf
+                <label for="author" class="text-sm font-medium text-gray-700">Author</label>
+                <input type="text" name="author" class="mt-1 py-2 px-3 block w-full borded border-gray-400 rounded-md shadow-sm" value="{{ Auth::user()->name }}" required>
 
-            @if ($errors->any())
-                <div class="mt-6">
-                    <ul class="bg-red-100 px-4 py-5 roundend-md">
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-            @endif
+                <label for="author" class="mt-6 block text-sm font-medium text-gray-700"></label>
+                <textarea name="text" class="mt-1 py-2 px-3 block w-full borded border-gray-400 rounded-md shadow-sm" placeholder="Please write something here..."required>{{ old('text') }}</textarea>
 
-            <button type="submit" class="mt-6 py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none">Post</button>
-        </form>
+                @if ($errors->any())
+                    <div class="mt-6">
+                        <ul class="bg-red-100 px-4 py-5 roundend-md">
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+
+                <button type="submit" class="mt-6 py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none">Post</button>
+            </form>
+      
+
     </div>
 </div>
 
