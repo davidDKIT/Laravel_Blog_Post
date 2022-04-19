@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Models\Comment;
+use App\Models\User;
 use Cviebrock\EloquentSluggable\Services\SlugService;
 use DB;
 
@@ -83,6 +84,32 @@ class PostsController extends Controller
             'post'     => $post,
             'comments' => $post->comments()->paginate(5)
         ]);
+    }
+    public function likes()
+    {
+        return view('likes')
+            ->with('posts', Post::orderBy('updated_at', 'DESC')->get());
+    }
+    public function like($slug, $user_id)
+    {
+        $object = Post::where('slug', $slug)->first();
+
+        $user = User::where('id', $user_id)->first();
+
+        $user->bookmark($object);
+
+        return redirect('/blog');
+    }
+
+    public function unlike($slug, $user_id)
+    {
+        $object = Post::where('slug', $slug)->first();
+
+        $user = User::where('id', $user_id)->first();
+
+        $user->bookmark($object);
+
+        return redirect('/likes');
     }
 
     /**

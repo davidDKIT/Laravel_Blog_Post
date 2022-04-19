@@ -20,6 +20,7 @@ Route::post('/search_post',[PostsController::class,'search']);
 Route::resource('/blog', PostsController::class); 
 Route::post('/blog/{post}/comments', [CommentsController::class, 'storeComment']);
 Route::delete('/comments/{comment}', [CommentsController::class, 'destroy']); 
+Route::get('/like', [App\Http\Controllers\PostsController::class, 'like']);
 
 Auth::routes();
 

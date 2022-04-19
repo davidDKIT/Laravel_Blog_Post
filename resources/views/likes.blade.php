@@ -10,13 +10,6 @@
     </div>
 </div>
 
-<form class="d-flex" method="post" action="{{ url('/search_post') }}">
-    @csrf
-    <input class="form-control me-2" type="search" placeholder="Search" name="search" aria-label="Search">
-    <button class="btn btn-dark"type="submit" name="submit">Search</button>
-</form>
-
-
 @if (session()->has('message'))
     <div class="w-4/5 m-auto mt-10 pl-2">
         <p class="w-2/6 mb-4 text-gray-50 bg-green-500 rounded-2xl py-4">
@@ -25,16 +18,8 @@
     </div>
 @endif
 
-@if (Auth::check())
-    <div class="pt-15 w-4/5 m-auto">
-        <a 
-            href="/blog/create"
-            class="bg-blue-500 uppercase bg-transparent text-gray-100 text-xs font-extrabold py-3 px-5 rounded-3xl">
-            Create post
-        </a>
-    </div>
-
 @foreach ($posts as $post)
+@if (Auth::user()->likes($post))
     <div class="sm:grid grid-cols-2 gap-20 w-4/5 mx-auto py-15 border-b border-gray-200">
         <div>
             <img src="{{ asset('images/' . $post->image_path) }}" alt="">
