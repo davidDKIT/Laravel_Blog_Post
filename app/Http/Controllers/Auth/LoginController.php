@@ -63,7 +63,7 @@ class LoginController extends Controller
         return Socialite::driver('github')->redirect();
     }
 
-    // Github callback
+    // Github callback function
     public function handleGithubCallback()
     {
         $user = Socialite::driver('github')->stateless()->user();
