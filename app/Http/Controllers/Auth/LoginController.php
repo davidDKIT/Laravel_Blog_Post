@@ -41,28 +41,12 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
     // Github login
-    public function redirectToGithub()
-    {
-        return Socialite::driver('github')->redirect();
-    }
-
-    // callback for github
-    public function handleGithubCallback()
-    {
-        $user = Socialite::driver('github')->stateless()->user();
-
-        $this->_registerOrLoginUser($user);
-
-        // Return home after login
-        return redirect()->route('index');
-    }
-    // Google login
     public function redirectToGoogle()
     {
         return Socialite::driver('google')->redirect();
     }
 
-    // callback for google
+    // Google callback
     public function handleGoogleCallback()
     {
         $user = Socialite::driver('google')->stateless()->user();
@@ -70,8 +54,26 @@ class LoginController extends Controller
         $this->_registerOrLoginUser($user);
 
         // Return home after login
-        return redirect()->route('index');
+        return redirect()->route('home');
     }
+
+    // Github login
+    public function redirectToGithub()
+    {
+        return Socialite::driver('github')->redirect();
+    }
+
+    // Github callback
+    public function handleGithubCallback()
+    {
+        $user = Socialite::driver('github')->stateless()->user();
+
+        $this->_registerOrLoginUser($user);
+
+        // Return home after login
+        return redirect()->route('home');
+    }
+
     // facebook login
     public function redirectToFaceBook()
     {
@@ -81,12 +83,12 @@ class LoginController extends Controller
     // callback for facebook
     public function handleFaceBookCallback()
     {
-        $user = Socialite::driver('facebook')->stateless()->user();
+        $user = Socialite::driver('facebook')->user();
 
         $this->_registerOrLoginUser($user);
 
         // Return home after login
-        return redirect()->route('index');
+        return redirect()->route('home');
     }
     protected function _registerOrLoginUser($data)
     {
