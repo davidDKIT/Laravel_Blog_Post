@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', [PagesController::class, 'index']);
+Route::get('/', [PagesController::class, 'index'])->name('index');
 Route::post('/search_post',[PostsController::class,'search']);
 Route::resource('/blog', PostsController::class); 
 Route::post('/blog/{post}/comments', [CommentsController::class, 'storeComment']);
