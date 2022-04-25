@@ -27,11 +27,16 @@ Auth::routes();
 
 Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+// Password Reset Routes
+Route::get('password/reset/{token?}', 'Auth\PasswordController@showResetForm');
+Route::post('password/email', 'Auth\PasswordController@sendResetLinkEmail');
+Route::post('password/reset', 'Auth\PasswordController@reset');
+
 // Google login
 Route::get('login/google', [App\Http\Controllers\Auth\LoginController::class, 'redirectToGoogle'])->name('login.google');
-Route::get('login/google/callback', [App\Http\Controllers\Auth\LoginController::class, 'handleGoogleCallback']);
+Route::get('login/google/callback', [App\Http\Controllers\Auth\LoginController::class, 'handl65eGoogleCallback']);
 
-// Facebook login
+// Twitter login
 Route::get('login/twitter', [App\Http\Controllers\Auth\LoginController::class, 'redirectToTwitter'])->name('login.twitter');
 Route::get('login/twitter/callback', [App\Http\Controllers\Auth\LoginController::class, 'handlTwiiterCallback']);
 
