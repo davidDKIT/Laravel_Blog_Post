@@ -5,7 +5,7 @@
         <div class="flex text-gray-100 pt-10">
             <div class="m-auto pt-4 pb-16 sm:m-auto w-4/5 block text-center">
                 <h1 class="sm:text-white text-5xl uppercase font-bold text-shadow-md pb-14">
-                    Do you want to become a developer?
+                    Inspiring users across the world
                 </h1>
                 <a 
                     href="/blog"
@@ -54,16 +54,15 @@
 
         <div class="m-auto sm:m-auto text-left w-4/5 block">
             <h2 class="text-3xl font-extrabold text-gray-600">
-                Struggling to be a better web developer?
+                Want to dive deeper into the gaming world?
             </h2>
             
             <p class="py-8 text-gray-500 text-s">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus.
+                Let's take a closer look!
             </p>
 
             <p class="font-extrabold text-gray-600 text-s pb-9">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente magnam vero nostrum! Perferendis eos molestias porro vero. Vel alias.
-            </p>
+              In simplistic terms: A person who actively seeks out and plays games. I think most people will not define a person who only plays facebook or mobile games as a "gamer". Unfortunately the term brings with it a lot of elitism, which excludes people who does not care about the community or the knowledge behind the games.            </p>
 
             <a 
                 href="/blog"
