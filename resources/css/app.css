@@ -1,1 +1,15 @@
+<<<<<<< HEAD
 /* No CSS *//*# sourceMappingURL=app.css.map */
+=======
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+.background-image {
+    background-image: url('https://wallpaperaccess.com/full/100513.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 600px;
+}
+>>>>>>> 81737e28f7fa08395faa1d7f62638fa63d6eb5cc
