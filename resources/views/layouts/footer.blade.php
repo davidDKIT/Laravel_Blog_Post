@@ -4,6 +4,6 @@
             class="mt-3 max-w-full h-20 rounded-full mb-7" alt="">
         <br>
     <p class="w-25 pb-3 m-auto text-xs text-red-100 pt-6">
-        Copyright 2021-2022 All Rights Reserved, David McCabe + Terrence Yong.
+        Copyright 2021-2022 All Rights Reserved, David McCabe + Terence Yong.
     </p>
 </footer>
