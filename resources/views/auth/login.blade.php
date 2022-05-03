@@ -48,8 +48,8 @@
                     </a>
                 </div>
 
-                <div role="hidden" class="mt-12 border-t">
-                    <span class="block w-max mx-auto -mt-3 px-4 text-center text-gray-500 bg-white">Or</span>
+                <div role="hidden" class="mt-12">
+                    <span class="block w-max mx-auto -mt-3 px-4 text-center text-red-500 hover:text-red-800 font-medium tracking-wide">Or</span>
                 </div>
 
                 <form class="space-y-6 py-6" method="POST" action="{{ route('login') }}">
