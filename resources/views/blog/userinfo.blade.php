@@ -9,11 +9,10 @@
                     <div class="w-full p-2 py-10">
 
                         <div class="flex justify-center">
-                            <div class="relative">
-                                <span class="text-2xl font-medium">Profile Picture</span>
-                                <img src="{{ Auth::user()->image }}" class="w-75" alt="">
-                            </div>
-
+                            <span class="text-2xl font-medium">Profile Picture</span>
+                        </div>
+                        <div class="flex justify-center">
+                            <img src="./images/githubinspiredpp.png" width="80" alt="">
                         </div>
                         <div class="flex flex-col text-center mt-3 mb-4">
 
