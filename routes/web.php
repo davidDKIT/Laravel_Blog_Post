@@ -20,8 +20,6 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/', [PagesController::class, 'index'])->name('index');
 Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/my-profile', [\App\Http\Controllers\UserController::class, 'myprofile']);
-
-Route::
 Route::post('/search_post',[PostsController::class,'search']);
 Route::resource('/blog', PostsController::class); 
 Route::post('/blog/{post}/comments', [CommentsController::class, 'storeComment']);
