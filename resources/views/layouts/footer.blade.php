@@ -1,93 +1,9 @@
 <footer class="bg-red-800 py-15 mt-20">
-    <div class="sm:grid grid-cols-3 w-4/5 pb-10 m-auto border-b-2 border-red-700">
-        <div>
-            <h3 class="text-l sm:font-bold text-gray-100">
-                Pages
-            </h3>
-
-            <ul class="py-4 sm:text-s pt-4 text-gray-400">
-                <li class="pb-1">
-                    <a href="/">
-                        Home
-                    </a>
-                </li>
-                <li class="pb-1">
-                    <a href="/blog">
-                        Blog
-                    </a>
-                </li>
-                <li class="pb-1">
-                    <a href="/login">
-                        Login
-                    </a>
-                </li>
-                <li class="pb-1">
-                    <a href="/register">
-                        Register
-                    </a>
-                </li>
-            </ul>
-        </div>
-
-        <div>
-            <h3 class="text-l sm:font-bold text-red-100">
-                Find Us
-            </h3>
-
-            <ul class="py-4 sm:text-s pt-4 text-red-400">
-                <li class="pb-1">
-                    <a href="/">
-                        What we do
-                    </a>
-                </li>
-                <li class="pb-1">
-                    <a href="/">
-                        Address
-                    </a>
-                </li>
-                <li class="pb-1">
-                    <a href="/">
-                        Phone
-                    </a>
-                </li>
-                <li class="pb-1">
-                    <a href="/">
-                        Contact
-                    </a>
-                </li>
-            </ul>
-        </div>
-
-        <div>
-            <h3 class="text-l sm:font-bold text-red-100">
-                Latest posts
-            </h3>
-
-            <ul class="py-4 sm:text-s pt-4 text-red-400">
-                <li class="pb-1">
-                    <a href="/">
-                        Why we love tech
-                    </a>
-                </li>
-                <li class="pb-1">
-                    <a href="/">
-                        Why we love design
-                    </a>
-                </li>
-                <li class="pb-1">
-                    <a href="/">
-                        Why to use Laravel
-                    </a>
-                </li>
-                <li class="pb-1">
-                    <a href="/">
-                        Why PHP is the best
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <p class="w-25 w-4/5 pb-3 m-auto text-xs text-red-100 pt-6">
-        Copyright 2021-2022 David McCabe. All Rights Reserved
+    <p class="flex justify-center items-center">
+        <img src="data:image/png;base64,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"
+            class="mt-3 max-w-full h-20 rounded-full mb-7" alt="">
+        <br>
+    <p class="w-25 pb-3 m-auto text-xs text-red-100 pt-6">
+        Copyright 2021-2022 All Rights Reserved, David McCabe + Terrence Yong.
     </p>
 </footer>
