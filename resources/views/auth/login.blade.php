@@ -14,7 +14,7 @@
 
 
                 <div class="mt-12 grid gap-6 sm:grid-cols-2">
-                    <a href="{{ route('login.github') }}"
+                    <a href="{{ route('login.google') }}"
                         class="py-4 px-6 rounded-xl bg-blue-400 transition hover:bg-blue-300 active:bg-blue-200 focus:bg-blue-200">
                         <div class="flex gap-4 items-center justify-center text-white">
                             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20"
