@@ -9,7 +9,7 @@
                 </h1>
                 <a 
                     href="/blog"
-                    class="text-center bg-gray-50 text-gray-700 py-2 px-4 font-bold text-xl uppercase">
+                    class="text-center bg-gray-50 text-gray-700 hover:text-red-800 py-2 px-4 font-bold text-xl uppercase tracking-widetext-white">
                     Read More
                 </a>
             </div>
@@ -66,7 +66,7 @@
 
             <a 
                 href="/blog"
-                class="uppercase bg-blue-500 text-gray-100 text-s font-extrabold py-3 px-8 rounded-3xl">
+                class="uppercase bg-red-500 text-gray-100 hover:text-red-800 text-s font-extrabold py-3 px-8 rounded-3xl">
                 Find Out More
             </a>
         </div>
@@ -127,7 +127,7 @@
 
             <a 
                 href="/blog"
-                class="uppercase bg-blue-500 text-gray-100 text-s font-extrabold py-3 px-8 rounded-3xl">
+                class="uppercase bg-red-500 text-gray-100 hover:text-red-800 text-s font-extrabold py-3 px-8 rounded-3xl">
                 Find Out More
             </a>
           </div>

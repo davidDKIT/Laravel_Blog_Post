@@ -41,7 +41,7 @@
                 </div>
             @endif
 
-            <button type="submit" class="mt-6 py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none">Post</button>
+            <button type="submit" class="mt-6 py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-red-500 text-gray-100 hover:text-red-800 focus:outline-none">Post</button>
         </form>
 
         <div class="mt-6">
