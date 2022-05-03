@@ -9,7 +9,7 @@
                 </h1>
                 <a 
                     href="/blog"
-                    class="text-center bg-gray-50 text-gray-700 py-2 px-4 font-bold text-xl uppercase hover:text-red-800">
+                    class="text-center bg-gray-50 text-gray-700 py-2 px-4 font-bold text-xl uppercase">
                     Read More
                 </a>
             </div>
@@ -66,62 +66,81 @@
 
             <a 
                 href="/blog"
-                class="uppercase bg-red-700 text-gray-100 text-s font-extrabold py-3 px-8 rounded-3xl hover: text-red-200">
+                class="uppercase bg-blue-500 text-gray-100 text-s font-extrabold py-3 px-8 rounded-3xl">
                 Find Out More
             </a>
         </div>
     </div>
 
-    <div class="text-center p-15 bg-pink-700 text-white">
+    <div class="text-center p-15 bg-red-800 text-white">
+        <span class="font-extrabold block text-4xl py-5">
+            Quotes from gamers
+        </span>
+        
         <h2 class="text-2xl pb-5 text-l"> 
-            I'm an expert in...
+            I'm not a player. I'm a gamer. 
         </h2>
 
-        <span class="font-extrabold block text-4xl py-1">
-            Ux Design
-        </span>
-        <span class="font-extrabold block text-4xl py-1">
-            Project Management
-        </span>
-        <span class="font-extrabold block text-4xl py-1">
-            Digital Strategy
-        </span>
-        <span class="font-extrabold block text-4xl py-1">
-            Backend Development
-        </span>
+        <h2 class="text-2xl pb-5 text-l"> 
+            Home is where you are 'Player 1'.
+        </h2>
+        <h2 class="text-2xl pb-5 text-l"> 
+            Failure doesn't mean the game is over, it means try again with experience.
+        </h2>
+
+        <h2 class="text-2xl pb-5 text-l"> 
+            Education is important, but video games are importanter.
+        </h2>
     </div>
 
     <div class="text-center py-15">
         <span class="uppercase text-s text-gray-400">
-            Blog
+            More
         </span>
 
         <h2 class="text-4xl font-bold py-10">
-            Recent Posts
+            Recent Videos
         </h2>
 
         <p class="m-auto w-4/5 text-gray-500">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque exercitationem saepe enim veritatis, eos temporibus quaerat facere consectetur qui.
-        </p>
+            Games don't make you violent, lag does.  </p>
     </div>
-    <div class="sm:grid grid-cols-2 w-4/5 m-auto">
-        <div class="flex bg-yellow-700 text-gray-100 pt-10">
-            <div class="m-auto pt-4 pb-16 sm:m-auto w-4/5 block">
-                <span class="uppercase text-xs">
-                    PHP
-                </span>
-
-                <h3 class="text-xl font-bold py-10">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas necessitatibus dolorum error culpa laboriosam. Enim voluptas earum repudiandae consequuntur ad? Expedita labore aspernatur facilis quasi ex? Nemo hic placeat et?
-                </h3>
-
-                <a 
-                    href=""
-                    class="uppercase bg-transparent border-2 border-gray-100 text-gray-100 text-xs font-extrabold py-3 px-5 rounded-3xl">
-                    Find Out More
-                </a>
+    <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-7">
+            <div class="embed-responsive embed-responsive-16by9 mbl-video">
+                <a href="#"><i class="fa fa-play-circle-o fa-4x centered"></i></a>
+<iframe class="embed-responsive-item" width="640" height="360" src="https://www.youtube.com/embed/HLLofrwRlBg" frameborder="0" allowfullscreen></iframe>
+          </div>
             </div>
+          <div class="col-sm-12 col-md-5">
+            <h2 class="text-3xl font-extrabold text-gray-600">
+                Want to dive deeper into the gaming world?
+            </h2>
+            
+            <p class="py-8 text-gray-500 text-s">
+                Let's take a closer look!
+            </p>
+
+            <p class="font-extrabold text-gray-600 text-s pb-9">
+              In simplistic terms: A person who actively seeks out and plays games. I think most people will not define a person who only plays facebook or mobile games as a "gamer". Unfortunately the term brings with it a lot of elitism, which excludes people who does not care about the community or the knowledge behind the games.            </p>
+
+            <a 
+                href="/blog"
+                class="uppercase bg-blue-500 text-gray-100 text-s font-extrabold py-3 px-8 rounded-3xl">
+                Find Out More
+            </a>
+          </div>
         </div>
+        
+        <!--<div class="modal fade myModal">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          </div>
+           <div class="modal-content">
+             <iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/RtNuwdOTkvw?rel=0&amp;showinfo=0;autoplay=0" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div-->
         <div>
             <img src="https://cdn.pixabay.com/photo/2014/05/03/01/03/laptop-336704_960_720.jpg" alt="">
         </div>
