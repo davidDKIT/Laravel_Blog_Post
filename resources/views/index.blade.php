@@ -72,7 +72,7 @@
         </div>
     </div>
 
-    <div class="text-center p-15 bg-black text-white">
+    <div class="text-center p-15 bg-pink-700 text-white">
         <h2 class="text-2xl pb-5 text-l"> 
             I'm an expert in...
         </h2>
@@ -104,7 +104,6 @@
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque exercitationem saepe enim veritatis, eos temporibus quaerat facere consectetur qui.
         </p>
     </div>
-
     <div class="sm:grid grid-cols-2 w-4/5 m-auto">
         <div class="flex bg-yellow-700 text-gray-100 pt-10">
             <div class="m-auto pt-4 pb-16 sm:m-auto w-4/5 block">
