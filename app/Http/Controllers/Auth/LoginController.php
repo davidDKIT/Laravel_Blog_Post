@@ -74,22 +74,6 @@ class LoginController extends Controller
         return redirect()->route('index');
     }
 
-    // twitter login
-    public function redirectToTwitter()
-    {
-        return Socialite::driver('twitter')->redirect();
-    }
-
-    // callback for facebook
-    public function handleTwitterCallback()
-    {
-        $user = Socialite::driver('twitter')->user();
-
-        $this->_registerOrLoginUser($user);
-
-        // Return home after login
-        return redirect()->route('index');
-    }
     protected function _registerOrLoginUser($data)
     {
         $user = User::where('email', '=', $data->email)->first();

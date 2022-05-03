@@ -36,10 +36,6 @@ Route::post('password/reset', 'Auth\PasswordController@reset');
 Route::get('login/google', [App\Http\Controllers\Auth\LoginController::class, 'redirectToGoogle'])->name('login.google');
 Route::get('login/google/callback', [App\Http\Controllers\Auth\LoginController::class, 'handleGoogleCallback']);
 
-// Twitter login
-Route::get('login/twitter', [App\Http\Controllers\Auth\LoginController::class, 'redirectToTwitter'])->name('login.twitter');
-Route::get('login/twitter/callback', [App\Http\Controllers\Auth\LoginController::class, 'handlTwiiterCallback']);
-
 // Github login
 Route::get('login/github', [App\Http\Controllers\Auth\LoginController::class, 'redirectToGithub'])->name('login.github');
 Route::get('login/github/callback', [App\Http\Controllers\Auth\LoginController::class, 'handleGithubCallback']);
