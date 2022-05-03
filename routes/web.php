@@ -25,7 +25,13 @@ Route::post('/search_post',[PostsController::class,'search']);
 Route::resource('/blog', PostsController::class); 
 Route::post('/blog/{post}/comments', [CommentsController::class, 'storeComment']);
 Route::delete('/comments/{comment}', [CommentsController::class, 'destroy']); 
+// Password reset link request routes...
+Route::get('password/email', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.email');
+Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail');
 
+// Password reset routes...
+Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.request');
+Route::post('password/reset', 'Auth\ResetPasswordController@postReset')->name('password.reset');
 Auth::routes();
 
 

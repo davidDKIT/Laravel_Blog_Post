@@ -45,23 +45,24 @@
         <header class="bg-red-800 py-6">
             <div class="container mx-auto flex justify-between items-center px-6">
                 <div>
-                    <a href="{{ url('/') }}" class="text-lg font-semibold text-gray-100 no-underline">
+                    <a href="{{ url('/') }}" class="text-lg font-semibold text-gray-100 hover:text-gray-800">
                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
                             <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"/>
                           </svg>
                     </a>
                 </div>
                 <nav class="space-x-4 text-red-300 text-sm sm:text-base">
-                    <a class="no-underline hover:underline" href="/">Home</a>
-                    <a class="no-underline hover:underline" href="/blog">Blog</a>
+                    <a class="tracking-widetext-white hover:text-white font-medium" href="/">Home</a>
+                    <a class="tracking-widetext-white hover:text-white font-medium" href="/blog">Blog</a>
                     @guest
-                    <a class="no-underline hover:underline" href="{{ route('login') }}">{{ __('Login') }}</a>
+                    <a class="tracking-widetext-white hover:text-white font-medium" href="{{ route('login') }}">{{ __('Login') }}</a>
                     @if (Route::has('register'))
-                    <a class="no-underline hover:underline" href="{{ route('register') }}">{{ __('Register') }}</a>
+                    <a class="tracking-widetext-white hover:text-white font-medium" href="{{ route('register') }}">{{ __('Register') }}</a>
                     @endif
                     @else
-                    <a class="no-underline hover:underline" href="/my-profile">{{ Auth::user()->name }}</a>
-                    <a href="{{ route('logout') }}" class="no-underline hover:underline" onclick="event.preventDefault();
+                    <a class="tracking-widetext-white hover:text-white font-medium" href="/my-profile">{{ Auth::user()->name }}
+                    </a>
+                    <a href="{{ route('logout') }}" class="tracking-widetext-white hover:text-white font-medium" onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
                         {{ csrf_field() }}
