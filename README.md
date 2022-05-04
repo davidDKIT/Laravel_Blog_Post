@@ -1,10 +1,19 @@
-## Laravel 8 Complete Blog
+### Welcome, this laravel gaming blog is made by David and Terence.
+![](https://img.freepik.com/free-vector/simple-unique-gaming-banner-template_92741-92.jpg?w=2000)
 
-This repository is linked to [this youtube video](https://www.youtube.com/watch?v=HKJDLXsTr8A&t=4710s) where I show you how to create a complete blog in Laravel 8 using best practices.
+Why Gaming blog? Gaming blog is a fantastic way for a gamers, individual or group to communicate with their readers quickly and easily. It also offers an opportunity for readers to provide instant feedback in a virtual venue — creating a two-way conversation.
+Blogs were originally called “web logs,” and they’ve redefined how we communicate online. Blogs have also altered the very fabric of the marketing model, moving us away from a selling philosophy and into an era of building relationships.
 
-•	Author: Code With Dary <br>
-•	Twitter: [@codewithdary](https://twitter.com/codewithdary) <br>
-•	Instagram: [@codewithdary](https://www.instagram.com/codewithdary/) <br>
+Skills: MySql, Php, Laravel, Tailwind Css
+
+
+Terence's Github
+[<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg' alt='github' height='40'>](https://github.com/davidDkit )  
+David's Github
+[<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg' alt='github' height='40'>](https://github.com/terenceyong)  
+
+### Link to a youtube video about our the demo of our gaming blog
+[![Watch the video](https://miro.medium.com/max/1400/1*gkc2iPNeEX_h1V4YmXbV1g.jpeg)](https://www.youtube.com/watch?v=gumL5fXVwAU)
 
 ## Requirements
 •	PHP 7.3 or higher <br>
@@ -44,6 +53,7 @@ Migrate the tables
 ```
 php artisan migrate
 ```
-test push
+
 ## Contributing
 Do not hesitate to contribute to the project by adapting or adding features ! Bug reports or pull requests are welcome.
+hello
