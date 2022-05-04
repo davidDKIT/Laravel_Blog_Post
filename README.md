@@ -1,4 +1,4 @@
-### Welcome, this laravel gaming blog is made by David and Terence.
+### Hi there 👋, this laravel gaming blog is made by David and Terence.
 ![](https://img.freepik.com/free-vector/simple-unique-gaming-banner-template_92741-92.jpg?w=2000)
 
 Why Gaming blog? Gaming blog is a fantastic way for a gamers, individual or group to communicate with their readers quickly and easily. It also offers an opportunity for readers to provide instant feedback in a virtual venue — creating a two-way conversation.
